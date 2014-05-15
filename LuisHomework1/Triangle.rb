@@ -8,6 +8,8 @@ class Triangle
   end
 
   def kind
+  	return 'Isoceletes' if isosceles?
+    return 'Equilareral' if equilateral?
   end
 
   private
@@ -27,10 +29,8 @@ class Triangle
   end
 
   def violates_inequality?
-    return true if ((@a+@b)>@c && (@a+@c)>@b && (@c+@b)>@a)
   end
 
   def impossible_length_side?
-    true if ((@a || @b ||@c)<1)
   end
 end
