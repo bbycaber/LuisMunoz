@@ -8,11 +8,18 @@ class Triangle
   end
 
   def kind
+  	return sides
   	return 'Isoceletes' if isosceles?
     return 'Equilareral' if equilateral?
   end
 
   private
+
+  def sides
+    return 'Ilegal Triangle' if illegal?
+    return 'Violate Inequality' if violates_inequality?
+    return 'Impossible Length Side' if impossible_length_side?
+  end
 
  def equilateral?
     return true if @a==@b && @c==@a
