@@ -14,4 +14,19 @@ class Triangle
 
   def sides
   end
+
+  def equilateral?
+  end
+
+  def isosceles?
+  end
+
+  def illegal?
+  end
+
+  def violates_inequality?
+  end
+
+  def impossible_length_side?
+  end
 end
