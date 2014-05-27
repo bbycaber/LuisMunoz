@@ -20,15 +20,15 @@ class Team
 	filters = players.select{|player| player.position == position}
 	puts name
 	puts "Players"
-	filters.each {|player| puts "Name: " + player.name + "Position: " player.position}
-
-
+	filters.each {|player| print "Name: " + player.name + " Position: " + player.position}
   end
 
   private
 # filter if the player is in the team
   def filter(player)
-  	players.each{|player2| player2 == player}
+  end
+
+  def create_player(name,position)
   end
 
 end
