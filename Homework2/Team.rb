@@ -7,7 +7,7 @@ class Team
   end
 
   def add_player(name,position)
-  	player = Player.new(name,position)
+  	player = create_player(name,position)
   	players.push(player)
   end
 
@@ -26,9 +26,15 @@ class Team
   private
 # filter if the player is in the team
   def filter(player)
+  	filters = players.select{|player| player.position == position}
+  	if(filters.count>0) 
+  		true
+  	else
+  		false;
   end
 
   def create_player(name,position)
+  	Player.new(name,position) if !filter
   end
 
 end
