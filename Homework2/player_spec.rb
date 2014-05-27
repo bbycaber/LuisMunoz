@@ -9,10 +9,9 @@ describe Player do
         end
 
         it "should respond to #name" do
-            expect(triangle).to respond_to(:name)
+            expect(player).to respond_to(:name)
         end
         it "should respond to #position"
-            expect(triangle).to respond_to(:position)
-        it "should respond to #c"
+            expect(player).to respond_to(:position)
     end
 end
