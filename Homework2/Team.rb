@@ -12,7 +12,8 @@ class Team
   end
 
   def remove_player(name,position)
-
+  	player = Player.new(name,position)
+  	@players.pop(player)
   end
 
   def filter_by_position(position)
