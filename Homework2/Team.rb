@@ -19,7 +19,7 @@ class Team
 
   def remove_player(name,position)
   	player = create_player(name,position)
-  	players.pop(player)
+  	players.delete_if{|player| players}
   end
 
   def filter_by_position(position)
@@ -45,7 +45,7 @@ class Team
   	end
   end
 
-end
+ end
 end
 
 
