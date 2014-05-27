@@ -3,11 +3,12 @@ class Team
   
   def initialize(name)
   	@name = name
-  	@player =[]
+  	@players =[]
   end
 
   def add_player(name,position)
-
+  	player = Player.new(name,position)
+  	@players.push(player)
   end
 
   def remove_player(name)
