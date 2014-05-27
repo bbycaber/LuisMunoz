@@ -13,4 +13,7 @@ class Team
   def remove_player(name)
   end
 
+  def filter_by_position(position)
+  end
+
 end
