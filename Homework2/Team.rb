@@ -7,12 +7,18 @@ class Team
   end
 
   def add_player(name,position)
+
   	player = create_player(name,position)
-  	players.push(player)
+  	if(player.is_a? Player)
+  	  players.push(player)
+  	else
+  		puts "Is in the team"
+  	end
+  	
   end
 
   def remove_player(name,position)
-  	player = Player.new(name,position)
+  	player = create_player(name,position)
   	players.pop(player)
   end
 
@@ -28,15 +34,18 @@ class Team
   def filter(player)
   	filters = players.select{|player| player.position == position}
   	if(filters.count>0) 
-  		true
+  		return true
   	else
-  		false;
+  		return false;
   end
 
   def create_player(name,position)
-  	Player.new(name,position) if !filter
+  	if (filter(Player.new(name,position)) == false)
+  		Player.new(name,position)
+  	end
   end
 
+end
 end
 
 
