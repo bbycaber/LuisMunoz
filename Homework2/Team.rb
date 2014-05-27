@@ -7,7 +7,10 @@ class Team
   end
 
   def add_player(name,position)
-  	
+
+  end
+
+  def remove_player(name)
   end
 
 end
