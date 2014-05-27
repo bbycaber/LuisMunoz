@@ -20,7 +20,7 @@ class Team
   end
 
   private
-
+# filter if the player is in the team
   def filter(player)
   end
 
