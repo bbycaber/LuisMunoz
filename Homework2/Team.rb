@@ -8,15 +8,21 @@ class Team
 
   def add_player(name,position)
   	player = Player.new(name,position)
-  	@players.push(player)
+  	players.push(player)
   end
 
   def remove_player(name,position)
   	player = Player.new(name,position)
-  	@players.pop(player)
+  	players.pop(player)
   end
 
   def filter_by_position(position)
   end
 
+  private
+
+  def filter(player)
+  end
+
 end
+
