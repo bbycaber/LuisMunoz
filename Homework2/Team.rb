@@ -6,4 +6,8 @@ class Team
   	@player =[]
   end
 
+  def add_player(name,position)
+  	
+  end
+
 end
